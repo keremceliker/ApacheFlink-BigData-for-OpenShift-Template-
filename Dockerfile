@@ -16,12 +16,13 @@
 # limitations under the License.
 ###############################################################################
 
-FROM ubi8-minimal:8-released
+FROM registry.it.mcgill.ca/containers/redhat/openjdk18-openshift
 
 # Install dependencies
 RUN set -ex; \
   yum update; \
   yum install -y snappy-devel gettext-libs;
+  rm -rf /var/cache/yum
 
 # Grab gosu for easy step-down from root
 ENV GOSU_VERSION 1.11
