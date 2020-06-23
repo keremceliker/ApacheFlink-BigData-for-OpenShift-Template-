@@ -16,7 +16,7 @@
 # limitations under the License.
 ###############################################################################
 
-FROM openjdk/openjdk-8-rhel8
+FROM registry.it.mcgill.ca/containers/redhat/openjdk-11-rhel7
 
 # Install dependencies
 RUN set -ex; \
