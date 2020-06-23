@@ -16,13 +16,12 @@
 # limitations under the License.
 ###############################################################################
 
-FROM openjdk:8-jre
+FROM openjdk/openjdk-8-rhel8
 
 # Install dependencies
 RUN set -ex; \
-  apt-get update; \
-  apt-get -y install libsnappy1v5 gettext-base; \
-  rm -rf /var/lib/apt/lists/*
+  yum update; \
+  yum install -y snappy-devel gettext-libs;
 
 # Grab gosu for easy step-down from root
 ENV GOSU_VERSION 1.11
