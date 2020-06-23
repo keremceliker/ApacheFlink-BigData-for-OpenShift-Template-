@@ -19,8 +19,7 @@
 FROM java:openjdk-8-jdk
 
 # Install dependencies
-RUN set -ex; \
-  yum -y install snappy-devel gettext-libs;
+RUN yum -y install snappy-devel gettext-libs;
 
 # Grab gosu for easy step-down from root
 ENV GOSU_VERSION 1.11
