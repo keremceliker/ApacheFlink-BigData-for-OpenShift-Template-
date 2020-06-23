@@ -16,7 +16,7 @@
 # limitations under the License.
 ###############################################################################
 
-FROM openjdk:8
+FROM ubi8-minimal:8-released
 
 # Install dependencies
 RUN set -ex; \
