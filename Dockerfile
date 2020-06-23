@@ -16,11 +16,10 @@
 # limitations under the License.
 ###############################################################################
 
-FROM openjdk:8-jdk
+FROM java:openjdk-8-jdk
 
 # Install dependencies
 RUN set -ex; \
-  apk update && apk add zip unzip; \
   yum update; \
   yum install -y snappy-devel gettext-libs;
 
