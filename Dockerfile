@@ -16,7 +16,7 @@
 # limitations under the License.
 ###############################################################################
 
-FROM registry.it.mcgill.ca/containers/redhat/openjdk18-openshift
+FROM openjdk:8
 
 # Install dependencies
 RUN set -ex; \
