@@ -19,7 +19,7 @@
 FROM registry.it.mcgill.ca/containers/redhat/openjdk18-openshift
 
 # Install dependencies
-RUN
+RUN set -ex; \
   yum update; \
   yum install -y snappy-devel gettext-libs;
   rm -rf /var/cache/yum
