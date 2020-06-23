@@ -16,7 +16,7 @@
 # limitations under the License.
 ###############################################################################
 
-FROM java-1.8.0-openjdk-headless
+FROM java-1.8.0-openjdk
 
 # Install dependencies
 RUN set -ex; \
