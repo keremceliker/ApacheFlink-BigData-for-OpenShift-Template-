@@ -16,7 +16,7 @@
 # limitations under the License.
 ###############################################################################
 
-FROM registry.it.mcgill.ca/containers/redhat/openjdk-11-rhel7
+FROM ubi8-minimal:8-released
 
 # Install dependencies
 RUN set -ex; \
