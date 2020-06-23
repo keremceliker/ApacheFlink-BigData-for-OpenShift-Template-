@@ -16,7 +16,12 @@
 # limitations under the License.
 ###############################################################################
 
-FROM openjdk:7-jdk-alpine
+FROM java-1.8.0-openjdk-headless
+
+# Install dependencies
+RUN set -ex; \
+  yum update; \
+  yum -y Install snappy-devel gettext-libs; 
 
 # Grab gosu for easy step-down from root
 ENV GOSU_VERSION 1.11
