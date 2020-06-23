@@ -16,7 +16,7 @@
 # limitations under the License.
 ###############################################################################
 
-FROM openjdk:8
+FROM openjdk:7-jdk-alpine
 
 # Install dependencies
 RUN set -ex; \
