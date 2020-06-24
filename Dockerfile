@@ -18,12 +18,6 @@
 
 FROM openjdk:8-jre
 
-# Install dependencies
-RUN set -ex; \
-  yum -y install update; \
-  yum -y install snappy-devel gettext-base; \
-  rm -rf /var/lib/apt/lists/*
-
 # Grab gosu for easy step-down from root
 ENV GOSU_VERSION 1.11
 RUN set -ex; \
