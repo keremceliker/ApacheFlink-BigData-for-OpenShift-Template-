@@ -34,7 +34,7 @@ RUN set -ex; \
   gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; \
   gpgconf --kill all; \
   rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; \
-  chmod +x /usr/local/bin/gosu; \
+  chmod +x /docker-entrypoint.sh; \
   gosu nobody true
 
 # Configure Flink version
