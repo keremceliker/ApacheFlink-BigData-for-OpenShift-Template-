@@ -34,7 +34,7 @@ RUN set -ex; \
   gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; \
   gpgconf --kill all; \
   rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; \
-  chmod +x /docker-entrypoint.sh; \
+  chmod +x /usr/local/bin/gosu; \
   gosu nobody true
 
 # Configure Flink version
@@ -78,5 +78,6 @@ RUN set -ex; \
 USER flink
 COPY docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
+RUN ["chmod", "+x", "/docker-entrypoint.sh"]
 EXPOSE 6123 8081
 CMD ["help"]
