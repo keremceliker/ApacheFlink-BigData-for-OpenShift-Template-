@@ -3,7 +3,7 @@ services:
  flink-master:
    image: bde2020/flink-master:1.7.2-hadoop2.8
    hostname: flink-master
-   container_name: flink-master
+   container_name: flink-master1
 #   domainname: hadoop
 #   networks:
 #     - hadoop
