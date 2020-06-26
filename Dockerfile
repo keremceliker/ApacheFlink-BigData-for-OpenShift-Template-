@@ -16,7 +16,7 @@
 # limitations under the License.
 ###############################################################################
 
-FROM openjdk:8-jre
+FROM java:8
 
 # Grab gosu for easy step-down from root
 ENV GOSU_VERSION 1.11
